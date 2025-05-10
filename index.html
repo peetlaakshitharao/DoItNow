@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DoItNow To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1 class="logo">DoItNow</h1>
+  </div>
+
+  <div class="container">
+    <h2>My To-Do List</h2>
+
+    <!-- Input Area -->
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter a new task...">
+      <input type="date" id="taskDueDate">
+      <button onclick="addTask()">Add Task</button>
+    </div>
+
+    <!-- Search and Filter -->
+    <input type="text" id="search" placeholder="Search tasks..." oninput="searchTasks()">
+
+    <!-- Sort buttons -->
+    <div class="sort-options">
+      <button onclick="sortTasks('date')">Sort by Date</button>
+      <button onclick="sortTasks('alphabet')">Sort A-Z</button>
+    </div>
+
+    <!-- Task List -->
+    <ul id="taskList"></ul>
+
+    <!-- Progress bar -->
+    <div id="progressBarContainer">
+      <progress id="progressBar" value="0" max="100"></progress>
+      <span id="progressText">Progress: 0%</span>
+    </div>
+
+    <!-- Clear All Tasks Button -->
+    <button class="clear-btn" onclick="clearAllTasks()">Clear All Tasks</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
